@@ -1,0 +1,28 @@
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 800ms ease-out;
+}
+
+
+.container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 4px;
+}
+

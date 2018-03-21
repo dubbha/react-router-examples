@@ -1,0 +1,33 @@
+{
+  "name": "react-router-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node launch.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Alex Dubovyk",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "history": "^4.7.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.2.2",
+    "react-transition-group": "^2.2.1",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.2.0",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "devDependencies": {}
+}
