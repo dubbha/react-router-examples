@@ -25,10 +25,10 @@ const AnimationExample = () => (
           />
 
           <ul style={styles.nav}>
-            <NavLink to="/hsl/10/90/50">Red</NavLink>
-            <NavLink to="/hsl/120/100/40">Green</NavLink>
-            <NavLink to="/rgb/33/150/243">Blue</NavLink>
-            <NavLink to="/rgb/240/98/146">Pink</NavLink>
+            <NavLink to="/rgb/255/0/0">Red</NavLink>
+            <NavLink to="/rgb/0/255/0">Green</NavLink>
+            <NavLink to="/rgb/0/0/255">Blue</NavLink>
+            <NavLink to="/hsl/60/100/25">Olive</NavLink>
           </ul>
 
           <div style={styles.content}>

@@ -20,7 +20,7 @@ class App extends Component {
           <Route
             render={({ location }) => (
                 <TransitionGroup>
-                  <CSSTransition key={location.key} classNames="fade" timeout={300}>
+                  <CSSTransition key={location.key} classNames="fade" timeout={1500}>
                     <Switch location={location}>
                       <Route path="/" exact component={Home} />
                       <Route path="/about" component={About} />
