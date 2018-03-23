@@ -21,14 +21,16 @@ const AnimationExample = () => (
           <Route
             exact
             path="/"
-            render={() => <Redirect to="/hsl/10/90/50" />}
+            render={() => <Redirect to='/hsl/10/90/50' />}
           />
 
           <ul style={styles.nav}>
             <NavLink to="/rgb/255/0/0">Red</NavLink>
-            <NavLink to="/rgb/0/255/0">Green</NavLink>
+            <NavLink to="/rgb/0/128/0">Green</NavLink>
             <NavLink to="/rgb/0/0/255">Blue</NavLink>
             <NavLink to="/hsl/60/100/25">Olive</NavLink>
+            <NavLink to="/hsl/16/100/66">Coral</NavLink>
+            <NavLink to="/hsl/302/59/65">Orchid</NavLink>
           </ul>
 
           <div style={styles.content}>
@@ -41,9 +43,10 @@ const AnimationExample = () => (
                 <Switch location={location}>
                   <Route exact path="/hsl/:h/:s/:l" component={HSL} />
                   <Route exact path="/rgb/:r/:g/:b" component={RGB} />
-                  {/* Without this `Route`, we would get errors during
+                  {/* Without this blank canvas route, we would get errors during
                     the initial transition from `/` to `/hsl/10/90/50`
-                */}
+                  */}
+                  <Route exact path="/" render={() => <div></div>} />
                   <Route render={() => <div>Not Found</div>} />
                 </Switch>
               </CSSTransition>
