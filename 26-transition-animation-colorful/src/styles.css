@@ -1,0 +1,11 @@
+a-bar { display: block; width: 100%; border: 1px solid gray; margin-bottom: 20px; font-family: 'Segoe UI' }
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
