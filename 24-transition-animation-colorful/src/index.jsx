@@ -15,47 +15,45 @@ const AnimationExample = () => (
   <Router>
     <Route
       render={({ location }) => {
-        console.log(location);
         return (
-        <div style={styles.fill}>
-          <Route
-            exact
-            path="/"
-            render={() => <Redirect to='/hsl/10/90/50' />}
-          />
+          <div style={styles.fill}>
+            <Route
+              exact
+              path="/"
+              render={() => <Redirect to='/hsl/10/90/50' />}
+            />
 
-          <AddressBar />
+            <ul style={styles.nav}>
+              <NavLink to="/rgb/255/0/0">Red</NavLink>
+              <NavLink to="/rgb/0/128/0">Green</NavLink>
+              <NavLink to="/rgb/0/0/255">Blue</NavLink>
+              <NavLink to="/hsl/60/100/25">Olive</NavLink>
+              <NavLink to="/hsl/16/100/66">Coral</NavLink>
+              <NavLink to="/hsl/302/59/65">Orchid</NavLink>
+            </ul>
 
-          <ul style={styles.nav}>
-            <NavLink to="/rgb/255/0/0">Red</NavLink>
-            <NavLink to="/rgb/0/128/0">Green</NavLink>
-            <NavLink to="/rgb/0/0/255">Blue</NavLink>
-            <NavLink to="/hsl/60/100/25">Olive</NavLink>
-            <NavLink to="/hsl/16/100/66">Coral</NavLink>
-            <NavLink to="/hsl/302/59/65">Orchid</NavLink>
-          </ul>
-
-          <div style={styles.content}>
-            <TransitionGroup>
-              {/*
-                Make sure to pass `location` to `Switch`
-                so it can match the old location as it animates out
-              */}
-              <CSSTransition key={location.key} classNames="fade" timeout={500}>
-                <Switch location={location}>
-                  <Route exact path="/hsl/:h/:s/:l" component={HSL} />
-                  <Route exact path="/rgb/:r/:g/:b" component={RGB} />
-                  {/* Without this blank canvas route, we would get errors during
-                    the initial transition from `/` to `/hsl/10/90/50`
-                  */}
-                  <Route exact path="/" render={() => <div></div>} />
-                  <Route render={() => <div>Not Found</div>} />
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
+            <div style={styles.content}>
+              <TransitionGroup>
+                {/*
+                  Make sure to pass `location` to `Switch`
+                  so it can match the old location as it animates out
+                */}
+                <CSSTransition key={location.key} classNames="fade" timeout={500}>
+                  <Switch location={location}>
+                    <Route exact path="/hsl/:h/:s/:l" component={HSL} />
+                    <Route exact path="/rgb/:r/:g/:b" component={RGB} />
+                    {/* Without this blank canvas route, we would get errors during
+                      the initial transition from `/` to `/hsl/10/90/50`
+                    */}
+                    <Route exact path="/" render={() => <div></div>} />
+                    <Route render={() => <div>Not Found</div>} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            </div>
           </div>
-        </div>
-      )}}
+        )
+      }}
     />
   </Router>
 );
