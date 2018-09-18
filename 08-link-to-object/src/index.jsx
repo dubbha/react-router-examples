@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
+import './styles.css';
+
+const AddressBar = () => (<a-bar>{(window.location.href)}</a-bar>);
+
 class About extends Component {
   constructor(props) {
     super(props);
@@ -20,8 +24,9 @@ class About extends Component {
       <div>
         <div>About</div>
         <div>You came from { this.state.fromHome ? 'Home' : 'where, my friend?' }</div>
-        {/* <div>props: <pre>{JSON.stringify(this.props, null, 2)}</pre></div>
-        <div>state: <pre>{JSON.stringify(this.state, null, 2)}</pre></div> */}
+        {/* <div>props.location.state: <pre>{JSON.stringify(this.props.location.state, null, 2)}</pre></div> */}
+        {/* <div>props.location: <pre>{JSON.stringify(this.props.location, null, 2)}</pre></div> */}
+        {/* <div>props: <pre>{JSON.stringify(this.props, null, 2)}</pre></div> */}
       </div>
     );
     
@@ -31,6 +36,7 @@ class About extends Component {
 const App = () => (
   <Router>
     <div>
+      <AddressBar />
       <Link to={{
           pathname: '/about',        // A string representing the path to link to
           search: '?what=company',   // A string represenation of query parameters

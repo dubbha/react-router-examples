@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const About = () => (<h1>About</h1>);
 const App = () => (
   <BrowserRouter>
     <div>
-      <Route exact path="/" component={Home} />
+      <Route path="/" component={Home} />
       <Route path="/about" component={About} />
     </div>
   </BrowserRouter>

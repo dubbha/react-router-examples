@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, NavLink, Redirect } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ const App = () => (
         <Route strict path="/about" component={About} />
         <Route strict path="/contacts" component={Contacts} />
         <Route strict path="/not-found" component={NotFound} />
-        <Route component={NotFound} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </div>
   </Router>

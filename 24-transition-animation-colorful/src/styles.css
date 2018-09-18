@@ -1,4 +1,4 @@
-a-bar { display: block; width: 100%; border: 1px solid gray; margin-bottom: 20px; font-family: 'Segoe UI' }
+a-bar { display: block; width: calc(100% - 2px); border: 1px solid gray; margin: 1px; box-sizing: border-box; font-family: 'Segoe UI' }
 
 .fade-enter {
   opacity: 0;

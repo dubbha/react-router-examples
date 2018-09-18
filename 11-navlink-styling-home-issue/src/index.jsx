@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ const App = () => (
         <NavLink to="/contacts">Contacts</NavLink>
       </nav>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contacts" component={Contacts} />
       </Switch>

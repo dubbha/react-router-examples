@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import {
   BrowserRouter as Router,
@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 
 import './styles.css';
+
+const AddressBar = () => (<a-bar>{(window.location.href)}</a-bar>);
 
 const AnimationExample = () => (
   <Router>
@@ -22,6 +24,8 @@ const AnimationExample = () => (
               path="/"
               render={() => <Redirect to='/hsl/10/90/50' />}
             />
+
+            <AddressBar />
 
             <ul style={styles.nav}>
               <NavLink to="/rgb/255/0/0">Red</NavLink>
@@ -91,48 +95,49 @@ const RGB = ({ match: { params } }) => (
 const styles = {};
 
 styles.fill = {
-  position: "absolute",
+  position: 'absolute',
   left: 0,
   right: 0,
   top: 0,
-  bottom: 0
+  bottom: 0,
 };
 
 styles.content = {
   ...styles.fill,
-  top: "40px",
-  textAlign: "center"
+  top: '60px',
+  textAlign: 'center',
 };
 
 styles.nav = {
+  fontFamily: 'Segoe UI',
   padding: 0,
   margin: 0,
-  position: "absolute",
-  top: 0,
-  height: "40px",
-  width: "100%",
-  display: "flex"
+  position: 'absolute',
+  top: '20px',
+  height: '40px',
+  width: '100%',
+  display: 'flex',
 };
 
 styles.navItem = {
-  textAlign: "center",
+  textAlign: 'center',
   flex: 1,
-  listStyleType: "none",
-  padding: "10px"
+  listStyleType: 'none',
+  padding: '10px',
 };
 
 styles.hsl = {
   ...styles.fill,
-  color: "white",
-  paddingTop: "20px",
-  fontSize: "30px"
+  color: 'white',
+  paddingTop: '20px',
+  fontSize: '30px',
 };
 
 styles.rgb = {
   ...styles.fill,
-  color: "white",
-  paddingTop: "20px",
-  fontSize: "30px"
+  color: 'white',
+  paddingTop: '20px',
+  fontSize: '30px',
 };
 
-ReactDOM.render(<AnimationExample />, document.getElementById('root'));
+render(<AnimationExample />, document.getElementById('root'));

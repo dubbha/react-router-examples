@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ const App = () => (
       <AddressBar />
       <nav>
         <NavLink to="/red">Red</NavLink>
-        <NavLink to="/green" activeClassName="special">Green</NavLink>
+        <NavLink to="/green" activeClassName="special">Green</NavLink>                                  {/* activeClassName="" */}
         <NavLink to="/blue" activeStyle={{ backgroundColor: 'blue', color: 'white' }}>Blue</NavLink>
       </nav>
       <main>
