@@ -20,7 +20,7 @@ examples.forEach(e => {
         if(index.match(/^\d+$/g)) {  // only for numeric prefixes, do not attempt on utils for instance
             var config = require(configPath);
             config.devServer.contentBase = e;
-            config.devServer.publicPath = '/built/';
+            config.devServer.publicPath = '/build/';
 
             var compiler = webpack(config);
             var server = new WebpackDevServer(compiler, config.devServer);
@@ -28,9 +28,6 @@ examples.forEach(e => {
             var port = parseInt(`80${index}`);
 
             server.listen(port, "localhost", () => console.log(`Example "${e}" is running on http://localhost:${port}`));
-        } else {
-            var config = require(configPath);
-            webpack(config);
         }
     } catch (err) {
         console.log(`${err} ${e} is not an example`);
