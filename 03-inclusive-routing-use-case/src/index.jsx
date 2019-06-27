@@ -9,15 +9,13 @@ const UserContent = () => (<h1>User Content</h1>);
 
 const App = () => (
   <BrowserRouter>
-    <div>
-      <header>
-        <Route path="/user" component={UserMenu} />
-      </header>
-      <main>
-        <Route exact path="/" component={Home} />
-        <Route path="/user" component={UserContent} />
-      </main>
-    </div>
+    <header>
+      <Route path="/user" component={UserMenu} />
+    </header>
+    <main>
+      <Route exact path="/" component={Home} />
+      <Route path="/user" component={UserContent} />
+    </main>
   </BrowserRouter>
 );
 

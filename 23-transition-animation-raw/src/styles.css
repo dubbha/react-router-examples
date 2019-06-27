@@ -1,0 +1,71 @@
+/* Transition styles */
+.fade-enter {
+  opacity: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+/* Layout styles */
+.container {
+  padding: 0;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid gray;
+  background-color: lightgray;
+  box-sizing: border-box;
+}
+
+.block {
+  height: 150px;
+  width: 300px;
+  margin: auto;
+  box-sizing: border-box;
+  border: 1px solid gray;
+}
+
+nav {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  margin: 0 0 30px 0;
+}
+
+nav > a {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  border: none;
+  text-align: center;
+  width: 50%;
+  background-color: gray;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+}
+
+nav > a:first-of-type {
+  border-right: 1px solid gray;
+}
+
+.active {
+  background-color: lightgray;
+}
+
+body {
+  font: 16px/24px 'Segoe UI', sans-serif;
+  overflow-y: hidden;
+}

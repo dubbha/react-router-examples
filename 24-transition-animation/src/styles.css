@@ -1,0 +1,77 @@
+/* Transition styles */
+.fade-enter {
+  opacity: 0;
+  transform: translate(25px, 0);
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0);
+}
+
+.fade-exit {
+  opacity: 0.5;
+  transform: translate(0, -300px);
+
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  transform: translate(-25px, -300px);
+}
+
+/* Layout styles */
+.container {
+  padding: 0;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid gray;
+  background-color: lightgray;
+  box-sizing: border-box;
+}
+
+.block {
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  box-sizing: border-box;
+  border: 1px solid gray;
+}
+
+nav {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  margin: 0 0 30px 0;
+}
+
+nav > a {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  border: none;
+  text-align: center;
+  width: 50%;
+  background-color: gray;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+}
+
+nav > a:first-of-type {
+  border-right: 1px solid gray;
+}
+
+
+.active {
+  background-color: lightgray;
+}
+
+body {
+  font: 16px/24px 'Segoe UI', sans-serif;
+  overflow-y: hidden;
+}

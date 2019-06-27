@@ -1,13 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-const Home = () => (<h1>Home</h1>);
-const About = () => (<h1>About</h1>);
+const About = () => (<div>About (now try refreshing the page)</div>);
 
 const App = () => (
   <BrowserRouter>
-    <Route exact path="/" component={Home} />
+    <Link to="/about">About</Link>
     <Route path="/about" component={About} />
   </BrowserRouter>
 );
