@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 
 class ShowMatchUseHistory extends Component {
+    goAway = () => this.props.history.push('/away');
+
     render() {
         return (
             <div>
@@ -9,10 +11,6 @@ class ShowMatchUseHistory extends Component {
                 <button onClick={this.goAway}>Go Away</button>
             </div>
         );
-    }
-
-    goAway = () => {
-        this.props.history.push('/away');
     }
 }
     
