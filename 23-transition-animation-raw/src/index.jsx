@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-do
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import AddressBar from '../../common/AddressBar';
+import '../../common/styles.css';
 import './styles.css';
 
 const Home = () => (<div className="block">Home</div>);

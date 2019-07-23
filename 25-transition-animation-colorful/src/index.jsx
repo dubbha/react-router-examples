@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 
 import AddressBar from '../../common/AddressBar';
+import '../../common/styles.css';
 import './styles.css';
 
 const AnimationExample = () => (

@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, NavLink, Redirect } from 'react-router-dom';
 
 import AddressBar from '../../common/AddressBar';
+import '../../common/styles.css';
 
 const Home = () => (<div>Home</div>);
 const Current = () => (<div>Current</div>);

@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, NavLink, Redirect } from 'react-router-dom';
 
 import AddressBar from '../../common/AddressBar';
+import '../../common/styles.css';
 
 class AuthService {
   constructor() {
