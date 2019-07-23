@@ -1,0 +1,35 @@
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+a {
+  margin: 0;
+  width: 10%;
+}
+
+nav {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+color-field {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  top: 103px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 40px;
+}
