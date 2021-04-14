@@ -26,8 +26,9 @@ examples.forEach(e => {
             var server = new WebpackDevServer(compiler, config.devServer);
 
             var port = parseInt(`80${index}`);
+            var host = '127.0.0.1';
 
-            server.listen(port, "localhost", () => console.log(`Example "${e}" is running on http://localhost:${port}`));
+            server.listen(port, host, () => console.log(`Example "${e}" is running on http://${host}:${port}`));
         } else {
             var config = require(configPath);
             webpack(config);
